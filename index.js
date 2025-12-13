@@ -88,7 +88,7 @@ const handleConfirmPasswordInput = (inputDiv, errorMessage) => {
 
 //-- Form-Level Event Handler That Considers All Inputs --//
 const handleSubmit = (event) => {
-  event.preventDefault();
+//   event.preventDefault();
 
   const emailValidity = isValidInput(email, emailRegExp);
   setInputClass(email, emailValidity);
@@ -108,7 +108,13 @@ const handleSubmit = (event) => {
 
   const confirmPasswordValidity = isSecondPasswordValid(confirmPassword, password.value);
   setConfirmPasswordClass(confirmPassword, confirmPasswordValidity);
-  updateError(confirmPassword, emailError, emailValidity);
+  updateError(confirmPassword, confirmPasswordError, confirmPasswordValidity);
+
+  if (emailValidity && countryValidity && postalCodeValidity && passwordValidity && confirmPasswordValidity) {
+    form.submit(); // Actually submit the form
+  } else {
+    event.preventDefault(); // Stop submission if validation fails
+  }
 
 };
 
