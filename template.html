@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css">
+    <title>Document</title>
+  </head>
+  <body>
+
+    <form novalidate>
+
+      <p>
+        <label for="email">
+          <span>Please enter an email address:</span>
+          <input type="text" id="email" name="email" required minlength="8" />
+          <span id="email-error" aria-live="polite"></span>
+        </label>
+      </p>
+
+      <p>
+        <label for="country">
+          <span>Please enter your country:</span>
+          <input type="text" id="country" name="country" required/>
+          <span id="country-error" aria-live="polite"></span>
+        </label>
+      </p>
+
+      <p>
+        <label for="postal-code">
+          <span>Please enter your postal code:</span>
+          <input type="text" id="postal-code" name="postal-code" required/>
+          <span id="postal-code-error" aria-live="polite"></span>
+        </label>
+      </p>
+
+      <p>
+        <label for="password">
+          <span>Please create a password:</span>
+          <input type="text" id="password" name="password" required/>
+          <span id="password-error" aria-live="polite"></span>
+        </label>
+      </p>
+
+      <p>
+        <label for="confirm-password">
+          <span>Confirm password:</span>
+          <input type="text" id="confirm-password" name="confirm-password" required/>
+          <span id="confirm-password-error" aria-live="polite"></span>
+        </label>
+      </p>
+
+      <button>Submit</button>
+    </form>
+    
+    <script src="/index.js"></script>
+
+  </body>
+</html>
