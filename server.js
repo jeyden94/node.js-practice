@@ -12,7 +12,7 @@ const pool = new Pool({
   password: 'mytestdb1',
   host: '192.168.50.115', // Your VM's IP where PostgreSQL is running
   port: 5432, // Default PostgreSQL port
-  database: 'your_database_name'
+  database: 'form_data'
 });
 
 const server = createServer(async (req, res) => {
@@ -31,7 +31,7 @@ const server = createServer(async (req, res) => {
         
         // Insert into PostgreSQL
         await pool.query(
-          'INSERT INTO users (email, country, postal_code, password) VALUES ($1, $2, $3, $4)',
+          'INSERT INTO platform_users (email, country, postal_code, password) VALUES ($1, $2, $3, $4)',
           [data.email, data.country, data['postal-code'], data.password]
         );
 
