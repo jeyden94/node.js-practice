@@ -1,9 +1,9 @@
 // import "./styles.css";
 
 // eslint-disable-next-line no-undef
-if (process.env.NODE_ENV !== "production") {
-  console.log("Looks like we are in development mode!");
-}
+// if (process.env.NODE_ENV !== "production") {
+//   console.log("Looks like we are in development mode!");
+// }
 
 //-- Set Variables to Access Form, Input Divs and Error Message Divs --//
 const form = document.querySelector("form")
