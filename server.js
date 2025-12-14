@@ -10,7 +10,7 @@ const port = 3000;
 const pool = new Pool({
   user: 'jack',
   password: 'mytestdb1',
-  host: '192.168.50.115', // Your VM's IP where PostgreSQL is running
+  host: '192.168.50.117', // Your VM's IP where PostgreSQL is running
   port: 5432, // Default PostgreSQL port
   database: 'form_data'
 });
@@ -77,6 +77,6 @@ const server = createServer(async (req, res) => {
   });
 });
 
-server.listen(port, '0.0.0.0', () => {
-  console.log(`Server running at http://0.0.0.0:${port}`);
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}`);
 });
