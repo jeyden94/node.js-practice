@@ -10,7 +10,7 @@ const port = 3000;
 const pool = new Pool({
   user: 'jack',
   password: 'mytestdb1',
-  host: '192.168.50.117', // Your VM's IP where PostgreSQL is running
+  host: '192.168.50.116', // Your VM's IP where PostgreSQL is running
   port: 5432, // Default PostgreSQL port
   database: 'form_data'
 });
